@@ -1,5 +1,8 @@
-import "../assets/styles/main.scss";
+import React from "react";
 import { Josefin_Sans } from "@next/font/google";
+import SSRProvider from "react-bootstrap/SSRProvider";
+import { Footer, Header } from "../components";
+import "../styles/main.scss";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -7,7 +10,7 @@ const josefin = Josefin_Sans({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <SSRProvider>
       <style jsx global>{`
         html,
         body {
@@ -15,8 +18,10 @@ function MyApp({ Component, pageProps }) {
         }
       `}</style>
 
+      <Header />
       <Component {...pageProps} />
-    </>
+      <Footer />
+    </SSRProvider>
   );
 }
 
