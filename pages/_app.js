@@ -19,7 +19,11 @@ function MyApp({ Component, pageProps }) {
       `}</style>
 
       <Header />
-      <Component {...pageProps} />
+
+      <main>
+        <Component {...pageProps} />
+      </main>
+
       <Footer />
     </SSRProvider>
   );

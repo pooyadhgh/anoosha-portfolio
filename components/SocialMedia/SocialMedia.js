@@ -1,6 +1,6 @@
 import React from "react";
-import { Instagram, Linkedin, EnvelopeFill } from "react-bootstrap-icons";
 import cn from "classnames";
+import { Instagram, Linkedin, EnvelopeFill } from "react-bootstrap-icons";
 import styles from "./SocialMedia.module.scss";
 import { socialMedia } from "../../content";
 

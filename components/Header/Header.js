@@ -6,7 +6,7 @@ import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { List, X } from "react-bootstrap-icons";
 import { SocialMedia } from "../SocialMedia";
 import styles from "./Header.module.scss";
-import { logo, navLinks } from "../../content";
+import { logo, links } from "../../content";
 
 const Header = () => {
   const router = useRouter();
@@ -29,7 +29,7 @@ const Header = () => {
   }, []);
 
   return (
-    <>
+    <header>
       <Navbar expand={false} className={styles.navbar}>
         <Container fluid>
           <Navbar.Toggle
@@ -72,7 +72,7 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav>
-                {navLinks.map((navItem) => (
+                {links.map((navItem) => (
                   <Link
                     key={navItem.id}
                     href={navItem.link}
@@ -89,7 +89,7 @@ const Header = () => {
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-    </>
+    </header>
   );
 };
 

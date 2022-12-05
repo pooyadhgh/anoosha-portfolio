@@ -13,7 +13,7 @@ export const socialMedia = {
   email: "anoosha.niki@gmail.com",
 };
 
-export const navLinks = [
+export const links = [
   { label: "Home", link: "/", id: "home-page" },
   { label: "Portfolio", link: "/portfolio", id: "portfolio" },
   { label: "About Me", link: "/about", id: "about-me" },
