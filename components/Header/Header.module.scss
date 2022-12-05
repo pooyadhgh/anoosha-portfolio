@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+.toggleButton {
+  border: none !important;
+
+  svg {
+    fill: $black-color;
+    width: $icon-size-normal;
+    height: $icon-size-normal;
+  }
+}
+
+.closeButton {
+  svg {
+    fill: $black-color;
+    width: $icon-size-normal;
+    height: $icon-size-normal;
+    cursor: pointer;
+  }
+
+  border: none;
+  background-color: unset;
+  display: block;
+  margin-left: auto;
+}
+
+.closeButton:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.55);
+  border-radius: 0.25rem;
+}
+
+.navbar {
+  margin: 1rem 0;
+  @include medium_breakpoint {
+    margin: 3rem;
+  }
+}
+
+.navItem {
+  text-decoration: none;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: $black-color;
+  font-size: $font-size-large;
+  font-weight: $font-weight-semi-bold;
+}
+
+.navItem:hover {
+  color: $main-color;
+}
+
+.socialMedia {
+  display: none;
+
+  @include medium_breakpoint {
+    display: block;
+  }
+}
+
+.canvasSocialMedia {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+
+  @include medium_breakpoint {
+    display: none;
+  }
+}

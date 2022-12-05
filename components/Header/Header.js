@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+import { List, X } from "react-bootstrap-icons";
+import { SocialMedia } from "../SocialMedia";
 import styles from "./Header.module.scss";
+import { logo, navLinks } from "../../content";
 
 const Header = () => {
   const router = useRouter();
@@ -30,24 +30,29 @@ const Header = () => {
 
   return (
     <>
-      <Navbar expand={false} className='mb-3 p-5'>
+      <Navbar expand={false} className={styles.navbar}>
         <Container fluid>
           <Navbar.Toggle
             aria-controls='offcanvasNavbar-expand-false'
             onClick={handleShowCanvas}
             className={styles.toggleButton}
-          />
-          <Link href='/' passHref>
+          >
+            <List className={styles.toggleButton} />
+          </Navbar.Toggle>
+
+          <Link href={logo.link} passHref>
             <Navbar.Brand>
               <Image
-                src={"/images/logo.png"}
-                width='64'
-                height='69'
-                alt='Anoosha Niki Home Page'
+                src={logo.url}
+                width={logo.width}
+                height={logo.height}
+                alt={logo.alt}
               />
             </Navbar.Brand>
           </Link>
-          <div>social media logos</div>
+
+          <SocialMedia className={styles.socialMedia} />
+
           <Navbar.Offcanvas
             id='offcanvasNavbar-expand-false'
             aria-labelledby='offcanvasNavbar-expand-false'
@@ -55,26 +60,30 @@ const Header = () => {
             onHide={handleCloseCanvas}
             show={shouldShowCanvas}
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header>
+              <button
+                onClick={handleCloseCanvas}
+                className={styles.closeButton}
+              >
+                <X aria-label='Toggle Navbar' />
+              </button>
               <Offcanvas.Title id='offcanvasNavbar-expand-false-header' />
             </Offcanvas.Header>
+
             <Offcanvas.Body>
-              <Nav className='justify-content-end flex-grow-1 pe-3'>
-                <Link href='/' passHref>
-                  <Nav.Link as='span'>Home</Nav.Link>
-                </Link>
+              <Nav>
+                {navLinks.map((navItem) => (
+                  <Link
+                    key={navItem.id}
+                    href={navItem.link}
+                    className={styles.navItem}
+                    passHref
+                  >
+                    <Nav.Link as='span'>{navItem.label}</Nav.Link>
+                  </Link>
+                ))}
 
-                <Link href='/portfolio' passHref>
-                  <Nav.Link as='span'>Portfolio</Nav.Link>
-                </Link>
-
-                <Link href='/about' passHref>
-                  <Nav.Link as='span'>About Me</Nav.Link>
-                </Link>
-
-                <Link href='/contact' passHref>
-                  <Nav.Link as='span'>Contact Me</Nav.Link>
-                </Link>
+                <SocialMedia className={styles.canvasSocialMedia} />
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
