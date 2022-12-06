@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "../Button";
+import { LINKS } from "../../constants";
 import styles from "./ReachOut.module.scss";
-import { links } from "../../content";
 
 const ReachOut = () => {
-  const contactMe = links.find((link) => link.id === "contact-me");
-  const { link } = contactMe;
+  const contactPage = LINKS.find((link) => link.id === "contact");
+  const contactUrl = contactPage?.link || "#";
 
   return (
     <section className={styles.container}>
@@ -16,7 +16,7 @@ const ReachOut = () => {
       </p>
       <p>I’m in.</p>
 
-      <Button href={link}>Contact Me</Button>
+      <Button href={contactUrl}>Contact Me</Button>
     </section>
   );
 };

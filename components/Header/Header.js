@@ -8,7 +8,14 @@ import { SocialMedia } from "../SocialMedia";
 import IS_CLIENT from "../../utils/isClient";
 import useBreakpoint, { BREAKPOINTS } from "../../hooks/useBreakpoint";
 import styles from "./Header.module.scss";
-import { logo, links } from "../../content";
+import { LINKS } from "../../constants";
+
+const logo = {
+  link: "/",
+  alt: "Anoosha Niki Home Page",
+  url: "/images/logo.png",
+  id: "logo",
+};
 
 const Header = () => {
   const router = useRouter();
@@ -76,7 +83,7 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav>
-                {links.map((navItem) => (
+                {LINKS.map((navItem) => (
                   <Link
                     key={navItem.id}
                     href={navItem.link}
