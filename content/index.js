@@ -2,8 +2,6 @@ export const logo = {
   link: "/",
   alt: "Anoosha Niki Home Page",
   url: "/images/logo.png",
-  width: 42,
-  height: 46,
   id: "logo",
 };
 

@@ -4,16 +4,7 @@ $responsive-width-small: 420px !default;
 $responsive-width-medium: 768px !default;
 $responsive-width-large: 1024px !default;
 
-$responsive-width-set: (
-  "$responsive-width-xsmall": $responsive-width-xsmall,
-  "$responsive-width-small": $responsive-width-small,
-  "$responsive-width-medium": $responsive-width-medium,
-  "$responsive-width-large": $responsive-width-large,
-);
-
-// /*----------------------------------------
-//   MEDIA QUERIES
-// ----------------------------------------*/
+// Media queries
 @mixin xsmall_breakpoint {
   @media screen and (min-width: #{$responsive-width-xsmall}) {
     @content;
@@ -44,13 +35,6 @@ $responsive-width-set: (
   }
 }
 
-$breakpoint-set: (
-  "xsmall_breakpoint": $responsive-width-xsmall,
-  "small_breakpoint": $responsive-width-small,
-  "medium_breakpoint": $responsive-width-medium,
-  "large_breakpoint": $responsive-width-large,
-);
-
 // Colors
 $black-color: #000000 !default;
 $gray-color: #4a4542 !default;
@@ -69,6 +53,6 @@ $font-size-normal: 1rem;
 $font-size-large: 1.25rem;
 $font-size-heading: 1.5rem;
 
-// Icon size
+// Icon sizes
 $icon-size-normal: 36px;
 $icon-size-medium: 24px;

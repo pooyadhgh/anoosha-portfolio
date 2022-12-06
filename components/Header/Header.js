@@ -5,12 +5,16 @@ import { useRouter } from "next/router";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { List, X } from "react-bootstrap-icons";
 import { SocialMedia } from "../SocialMedia";
+import IS_CLIENT from "../../utils/isClient";
+import useBreakpoint, { BREAKPOINTS } from "../../hooks/useBreakpoint";
 import styles from "./Header.module.scss";
 import { logo, links } from "../../content";
 
 const Header = () => {
   const router = useRouter();
   const [shouldShowCanvas, setShouldShowCanvas] = useState(false);
+  const breakpoint = IS_CLIENT ? useBreakpoint() : "";
+  const isMobile = breakpoint === BREAKPOINTS.SMALL;
 
   const handleCloseCanvas = () => {
     setShouldShowCanvas(false);
@@ -44,14 +48,14 @@ const Header = () => {
             <Navbar.Brand>
               <Image
                 src={logo.url}
-                width={logo.width}
-                height={logo.height}
+                width={isMobile ? 32 : 42}
+                height={isMobile ? 35 : 46}
                 alt={logo.alt}
               />
             </Navbar.Brand>
           </Link>
 
-          <SocialMedia className={styles.socialMedia} />
+          {!isMobile && <SocialMedia />}
 
           <Navbar.Offcanvas
             id='offcanvasNavbar-expand-false'
@@ -83,7 +87,9 @@ const Header = () => {
                   </Link>
                 ))}
 
-                <SocialMedia className={styles.canvasSocialMedia} />
+                {isMobile && (
+                  <SocialMedia className={styles.canvasSocialMedia} />
+                )}
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

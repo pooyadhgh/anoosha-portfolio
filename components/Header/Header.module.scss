@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "styles/variables";
 
 .toggleButton {
   border: none !important;
@@ -50,20 +50,8 @@
   color: $main-color;
 }
 
-.socialMedia {
-  display: none;
-
-  @include medium_breakpoint {
-    display: block;
-  }
-}
-
 .canvasSocialMedia {
   display: flex;
   justify-content: center;
   margin: 3rem 0;
-
-  @include medium_breakpoint {
-    display: none;
-  }
 }
