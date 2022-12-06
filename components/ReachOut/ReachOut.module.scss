@@ -1,0 +1,25 @@
+@import "/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 0;
+
+  h2 {
+    margin: 0 0 3rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    margin: 2rem 0 0;
+
+    @include medium_breakpoint {
+      padding: 1rem 5rem;
+    }
+  }
+
+  @include medium_breakpoint {
+    align-items: center;
+  }
+}

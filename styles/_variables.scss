@@ -49,13 +49,14 @@ $font-weight-normal: 400;
 $font-weight-semi-bold: 600;
 
 // Font sizes
+$line-height: 2rem;
 $font-size-normal: 1rem;
 $font-size-large: 1.25rem;
 $font-size-heading: 1.5rem;
 
 // Icon sizes
-$icon-size-normal: 36px;
-$icon-size-medium: 24px;
+$icon-size-normal: 2.25rem;
+$icon-size-medium: 1.5rem;
 
 // Bootstrap overrides
 $primary: $main-color !default;

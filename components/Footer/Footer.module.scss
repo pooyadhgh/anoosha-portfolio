@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0 1rem;
+  margin: 5rem 0 1rem;
+  padding: 0 1rem;
 }
 
 .socialMedia {
@@ -25,8 +26,4 @@
 .link {
   text-decoration: none;
   color: $black-color;
-}
-
-.link:hover {
-  color: $main-color;
 }

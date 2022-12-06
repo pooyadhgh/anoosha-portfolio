@@ -2,8 +2,20 @@
 
 @import "bootstrap/scss/bootstrap";
 
+html,
+body {
+  font-weight: $font-weight-light;
+  font-size: $font-size-large;
+  line-height: $line-height;
+}
+
 main {
   width: 100%;
   min-height: 100vh;
   padding: 0 2rem;
+}
+
+h1,
+h2 {
+  font-size: $font-size-heading;
 }
