@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
-
 import useMediaQuery from "./useMediaQuery";
-
-export const BREAKPOINTS = {
-  XLARGE: "xlarge",
-  LARGE: "large",
-  MEDIUM: "medium",
-  SMALL: "small",
-  XSMALL: "xsmall",
-};
+import { BREAKPOINTS } from "../constants";
 
 const useBreakpoint = () => {
   const [breakpoint, setBreakpoint] = useState(BREAKPOINTS.XSMALL);

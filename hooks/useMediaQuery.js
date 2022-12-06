@@ -1,18 +1,10 @@
 import { useCallback, useState, useEffect } from "react";
-import { BREAKPOINTS } from "./useBreakpoint";
-
-export const breakpointSizes = {
-  xsmall: 420,
-  small: 768,
-  medium: 1024,
-  large: 1280,
-  xlarge: 1281,
-};
+import { BREAKPOINTS, BREAKPOINT_SIZES } from "../constants";
 
 const useMediaQuery = (breakpoint) => {
   const [targetReached, setTargetReached] = useState(false);
   const width =
-    typeof breakpoint === "number" ? breakpoint : breakpointSizes[breakpoint];
+    typeof breakpoint === "number" ? breakpoint : BREAKPOINT_SIZES[breakpoint];
 
   const updateTarget = useCallback((e) => {
     setTargetReached(e.matches);

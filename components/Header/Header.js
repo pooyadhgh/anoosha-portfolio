@@ -6,9 +6,9 @@ import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { List, X } from "react-bootstrap-icons";
 import { SocialMedia } from "../SocialMedia";
 import IS_CLIENT from "../../utils/isClient";
-import useBreakpoint, { BREAKPOINTS } from "../../hooks/useBreakpoint";
+import useBreakpoint from "../../hooks/useBreakpoint";
 import styles from "./Header.module.scss";
-import { LINKS } from "../../constants";
+import { BREAKPOINTS, LINKS } from "../../constants";
 
 const logo = {
   link: "/",
