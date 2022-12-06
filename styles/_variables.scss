@@ -56,3 +56,7 @@ $font-size-heading: 1.5rem;
 // Icon sizes
 $icon-size-normal: 36px;
 $icon-size-medium: 24px;
+
+// Bootstrap overrides
+$primary: $main-color !default;
+$secondary: $secondary-color !default;
