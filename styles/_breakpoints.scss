@@ -1,0 +1,36 @@
+// Page layout
+$responsive-width-xsmall: 320px !default;
+$responsive-width-small: 420px !default;
+$responsive-width-medium: 768px !default;
+$responsive-width-large: 1024px !default;
+
+// Media queries
+@mixin xsmall_breakpoint {
+  @media screen and (min-width: #{$responsive-width-xsmall}) {
+    @content;
+  }
+}
+
+@mixin small_breakpoint {
+  @media screen and (min-width: #{$responsive-width-small}) {
+    @content;
+  }
+}
+
+@mixin medium_breakpoint {
+  @media screen and (min-width: #{$responsive-width-medium}) {
+    @content;
+  }
+}
+
+@mixin large_breakpoint {
+  @media screen and (min-width: #{$responsive-width-large}) {
+    @content;
+  }
+}
+
+@mixin small_landscape_breakpoint {
+  @media screen and (max-width: #{$responsive-width-medium}) and (orientation: landscape) {
+    @content;
+  }
+}
