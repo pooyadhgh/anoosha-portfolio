@@ -11,3 +11,5 @@ export { ReachOut } from "./ReachOut";
 export { IndexHero } from "./IndexHero";
 
 export { AboutHero } from "./AboutHero";
+
+export { PortfolioHero } from "./PortfolioHero";
