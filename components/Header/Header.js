@@ -9,10 +9,11 @@ import IS_CLIENT from "../../utils/isClient";
 import useBreakpoint from "../../hooks/useBreakpoint";
 import styles from "./Header.module.scss";
 import { BREAKPOINTS, LINKS } from "../../constants";
+import logo from "../../assets/images/logo.png";
 
-const logo = {
+const logoa = {
   link: "/",
-  alt: "Anoosha Niki Home Page",
+  alt: "Anoosha Niki",
   url: "/images/logo.png",
 };
 
@@ -20,7 +21,8 @@ const Header = () => {
   const router = useRouter();
   const [shouldShowCanvas, setShouldShowCanvas] = useState(false);
   const breakpoint = IS_CLIENT ? useBreakpoint() : "";
-  const isMobile = breakpoint === BREAKPOINTS.SMALL;
+  const isMobile =
+    breakpoint === BREAKPOINTS.XSMALL || breakpoint === BREAKPOINTS.SMALL;
 
   const handleCloseCanvas = () => {
     setShouldShowCanvas(false);
@@ -49,13 +51,13 @@ const Header = () => {
           <List className={styles.toggleButton} />
         </Navbar.Toggle>
 
-        <Link href={logo.link} passHref>
+        <Link href='/' passHref>
           <Navbar.Brand>
             <Image
-              src={logo.url}
+              src={logo}
               width={isMobile ? 32 : 42}
               height={isMobile ? 35 : 46}
-              alt={logo.alt}
+              alt='Anoosha Niki'
             />
           </Navbar.Brand>
         </Link>

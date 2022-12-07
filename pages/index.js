@@ -1,9 +1,10 @@
 import React from "react";
-import { ReachOut } from "../components";
+import { IndexHero, ReachOut } from "../components";
 
 const HomePage = () => {
   return (
     <>
+      <IndexHero />
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium,
         recusandae sapiente. Nobis praesentium fugit, cum unde vero culpa ipsum,

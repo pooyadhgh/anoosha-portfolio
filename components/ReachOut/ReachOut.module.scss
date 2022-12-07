@@ -1,7 +1,8 @@
-@import "/styles/variables";
+@import "assets/styles/variables";
 
 .container {
   margin: 3rem 0;
+  text-align: center;
 
   h2 {
     margin: 0 0 3rem;
@@ -12,7 +13,7 @@
   }
 
   button {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
 
     @include medium_breakpoint {
       padding: 1rem 5rem;

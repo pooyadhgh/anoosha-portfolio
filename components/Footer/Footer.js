@@ -3,10 +3,11 @@ import Link from "next/link";
 import styles from "./Footer.module.scss";
 import { SocialMedia } from "../SocialMedia";
 import { LINKS } from "../../constants";
+import { Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className={styles.container}>
+    <Container as='footer' className={styles.container}>
       <SocialMedia className={styles.socialMedia} />
 
       <div className={styles.links}>
@@ -16,7 +17,7 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-    </footer>
+    </Container>
   );
 };
 
