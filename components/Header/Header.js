@@ -14,7 +14,6 @@ const logo = {
   link: "/",
   alt: "Anoosha Niki Home Page",
   url: "/images/logo.png",
-  id: "logo",
 };
 
 const Header = () => {
@@ -40,69 +39,62 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <Container fluid as='header'>
       <Navbar expand={false} className={styles.navbar}>
-        <Container fluid>
-          <Navbar.Toggle
-            aria-controls='offcanvasNavbar-expand-false'
-            onClick={handleShowCanvas}
-            className={styles.toggleButton}
-          >
-            <List className={styles.toggleButton} />
-          </Navbar.Toggle>
+        <Navbar.Toggle
+          aria-controls='offcanvasNavbar-expand-false'
+          onClick={handleShowCanvas}
+          className={styles.toggleButton}
+        >
+          <List className={styles.toggleButton} />
+        </Navbar.Toggle>
 
-          <Link href={logo.link} passHref>
-            <Navbar.Brand>
-              <Image
-                src={logo.url}
-                width={isMobile ? 32 : 42}
-                height={isMobile ? 35 : 46}
-                alt={logo.alt}
-              />
-            </Navbar.Brand>
-          </Link>
+        <Link href={logo.link} passHref>
+          <Navbar.Brand>
+            <Image
+              src={logo.url}
+              width={isMobile ? 32 : 42}
+              height={isMobile ? 35 : 46}
+              alt={logo.alt}
+            />
+          </Navbar.Brand>
+        </Link>
 
-          {!isMobile && <SocialMedia />}
+        {!isMobile && <SocialMedia />}
 
-          <Navbar.Offcanvas
-            id='offcanvasNavbar-expand-false'
-            aria-labelledby='offcanvasNavbar-expand-false'
-            placement='start'
-            onHide={handleCloseCanvas}
-            show={shouldShowCanvas}
-          >
-            <Offcanvas.Header>
-              <button
-                onClick={handleCloseCanvas}
-                className={styles.closeButton}
-              >
-                <X aria-label='Toggle Navbar' />
-              </button>
-              <Offcanvas.Title id='offcanvasNavbar-expand-false-header' />
-            </Offcanvas.Header>
+        <Navbar.Offcanvas
+          id='offcanvasNavbar-expand-false'
+          aria-labelledby='offcanvasNavbar-expand-false'
+          placement='start'
+          onHide={handleCloseCanvas}
+          show={shouldShowCanvas}
+        >
+          <Offcanvas.Header>
+            <button onClick={handleCloseCanvas} className={styles.closeButton}>
+              <X aria-label='Toggle Navbar' />
+            </button>
+            <Offcanvas.Title id='offcanvasNavbar-expand-false-header' />
+          </Offcanvas.Header>
 
-            <Offcanvas.Body>
-              <Nav>
-                {LINKS.map((navItem) => (
-                  <Link
-                    key={navItem.id}
-                    href={navItem.link}
-                    className={styles.navItem}
-                    passHref
-                  >
-                    <Nav.Link as='span'>{navItem.label}</Nav.Link>
-                  </Link>
-                ))}
+          <Offcanvas.Body>
+            <Nav>
+              {LINKS.map((navItem) => (
+                <Link
+                  key={navItem.id}
+                  href={navItem.link}
+                  className={styles.navItem}
+                  passHref
+                >
+                  <Nav.Link as='span'>{navItem.label}</Nav.Link>
+                </Link>
+              ))}
 
-                {isMobile && (
-                  <SocialMedia className={styles.canvasSocialMedia} />
-                )}
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
+              {isMobile && <SocialMedia className={styles.canvasSocialMedia} />}
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
       </Navbar>
-    </header>
+    </Container>
   );
 };
 

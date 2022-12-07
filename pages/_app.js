@@ -1,6 +1,6 @@
 import React from "react";
 import { Josefin_Sans } from "@next/font/google";
-import SSRProvider from "react-bootstrap/SSRProvider";
+import { SSRProvider, Container } from "react-bootstrap";
 import { Footer, Header } from "../components";
 import "../styles/main.scss";
 
@@ -20,9 +20,9 @@ function MyApp({ Component, pageProps }) {
 
       <Header />
 
-      <main>
+      <Container as='main'>
         <Component {...pageProps} />
-      </main>
+      </Container>
 
       <Footer />
     </SSRProvider>

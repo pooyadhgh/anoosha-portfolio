@@ -1,4 +1,5 @@
 import React from "react";
+import { Stack } from "react-bootstrap";
 import { Button } from "../Button";
 import { LINKS } from "../../constants";
 import styles from "./ReachOut.module.scss";
@@ -8,7 +9,7 @@ const ReachOut = () => {
   const contactUrl = contactPage?.link || "#";
 
   return (
-    <section className={styles.container}>
+    <Stack as='section' className={styles.container} direction='vertical'>
       <h2>Feel free to reach me out</h2>
       <p>
         Are you looking for designer to help you expand your company by meeting
@@ -17,7 +18,7 @@ const ReachOut = () => {
       <p>I’m in.</p>
 
       <Button href={contactUrl}>Contact Me</Button>
-    </section>
+    </Stack>
   );
 };
 
