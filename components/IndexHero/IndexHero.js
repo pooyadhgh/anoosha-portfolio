@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
-import heroImage from "../../assets/images/index-hero.png";
 import { Button } from "../Button";
+import heroImage from "../../assets/images/index-hero.png";
 import styles from "./IndexHero.module.scss";
-import { LINKS } from "../../constants";
 
 const IndexHero = () => {
   return (

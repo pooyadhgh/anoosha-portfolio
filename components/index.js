@@ -9,3 +9,5 @@ export { Button } from "./Button";
 export { ReachOut } from "./ReachOut";
 
 export { IndexHero } from "./IndexHero";
+
+export { AboutHero } from "./AboutHero";
