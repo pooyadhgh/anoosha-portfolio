@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { Container } from "react-bootstrap";
 import { PORTFOLIO } from "../../constants";
 import styles from "./portfolio.module.scss";
+import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 
 const PortfolioItem = () => {
   const { query } = useRouter();
@@ -23,7 +24,12 @@ const PortfolioItem = () => {
     );
   }
 
-  const { title, description, image, detail } = portfolio;
+  const { title, description, image, content, id } = portfolio;
+
+  // Next item card
+  const index = PORTFOLIO.findIndex((portfolio) => portfolio.id === id);
+  const isLastItem = index === PORTFOLIO.length - 1;
+  const nextItem = PORTFOLIO[isLastItem ? index - 1 : index + 1];
 
   return (
     <Container as='section' className={styles.container}>
@@ -35,7 +41,10 @@ const PortfolioItem = () => {
       </Container>
 
       <h2>What I did</h2>
-      <p>{detail}</p>
+      <div>{content}</div>
+
+      <h2>{isLastItem ? "Previous" : "Next"}</h2>
+      <PortfolioCard {...nextItem} />
     </Container>
   );
 };

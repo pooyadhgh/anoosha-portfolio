@@ -7,6 +7,10 @@
   h2 {
     margin: 2rem 0;
   }
+
+  h2:last-of-type {
+    margin-top: 5rem;
+  }
 }
 
 .imageContainer {
