@@ -2,17 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./PortfolioHero.module.scss";
-import heroImage from "../../assets/images/portfo-hero.png";
-import { PortfolioList } from "../PortfolioList";
 
 const PortfolioHero = () => {
   return (
     <>
-      <Row lg='2' className={styles.container}>
+      <Row as='section' lg='2' className={styles.container}>
         <Col lg>
-          <Container className={styles.imageContainer}>
-            <Image alt='UI/UX Design' src={heroImage} fill />
-          </Container>
+          <Image alt='Anoosha Niki Portfolio' src='/images/portfo.png' fill />
         </Col>
 
         <Col lg>
@@ -22,8 +18,6 @@ const PortfolioHero = () => {
           </Container>
         </Col>
       </Row>
-
-      <PortfolioList />
     </>
   );
 };

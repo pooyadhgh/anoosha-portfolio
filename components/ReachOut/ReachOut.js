@@ -6,8 +6,8 @@ import styles from "./ReachOut.module.scss";
 
 const ReachOut = () => {
   return (
-    <Container>
-      <Stack as='section' className={styles.container} direction='vertical'>
+    <Container as='section'>
+      <Stack className={styles.container} direction='vertical'>
         <h2>Feel free to reach me out</h2>
         <p>
           Are you looking for designer to help you expand your company by

@@ -1,8 +1,13 @@
 import React from "react";
-import { PortfolioHero } from "../../components";
+import { PortfolioHero, PortfolioList } from "../../components";
 
 const Portfolio = () => {
-  return <PortfolioHero />;
+  return (
+    <>
+      <PortfolioHero />
+      <PortfolioList />
+    </>
+  );
 };
 
 export default Portfolio;

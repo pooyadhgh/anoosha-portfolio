@@ -2,15 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./AboutHero.module.scss";
-import heroImage from "../../assets/images/about-hero.png";
 
 const AboutHero = () => {
   return (
-    <Row lg='2' className={styles.container}>
+    <Row as='section' lg='2' className={styles.container}>
       <Col lg>
-        <Container className={styles.imageContainer}>
-          <Image alt='UI/UX Design' src={heroImage} fill />
-        </Container>
+        <Image alt='About Anoosha Niki' src='/images/about.png' fill />
       </Col>
 
       <Col lg>

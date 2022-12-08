@@ -17,9 +17,8 @@
 .imgContainer {
   display: flex;
   justify-content: center;
-  max-width: 500px;
 
   img {
-    position: relative !important;
+    position: static !important;
   }
 }

@@ -8,9 +8,9 @@ const PortfolioCard = ({ title, description, year, image }) => {
   return (
     <Row className={styles.row} lg='2'>
       <Col lg className={cn(styles.col, styles.imageCol)}>
-        <div className={styles.imgContainer}>
-          <Image src={image} fill />
-        </div>
+        <Container className={styles.imgContainer}>
+          <Image src={image} alt={title} fill />
+        </Container>
       </Col>
 
       <Col lg className={styles.col}>

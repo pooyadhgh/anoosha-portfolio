@@ -2,16 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { Col, Container, Row } from "react-bootstrap";
 import { Button } from "../Button";
-import heroImage from "../../assets/images/index-hero.png";
 import styles from "./IndexHero.module.scss";
 
 const IndexHero = () => {
   return (
-    <Row lg='2' className={styles.container}>
+    <Row as='section' lg='2' className={styles.container}>
       <Col lg>
-        <Container className={styles.imageContainer}>
-          <Image alt='UI/UX Design' src={heroImage} fill />
-        </Container>
+        <Image alt='UI/UX Design - Anoosha Niki' src='/images/index.png' fill />
       </Col>
 
       <Col lg>

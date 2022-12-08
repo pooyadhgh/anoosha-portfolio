@@ -7,21 +7,14 @@ import { List, X } from "react-bootstrap-icons";
 import { SocialMedia } from "../SocialMedia";
 import IS_CLIENT from "../../utils/isClient";
 import useBreakpoint from "../../hooks/useBreakpoint";
-import styles from "./Header.module.scss";
 import { BREAKPOINTS, LINKS } from "../../constants";
-import logo from "../../assets/images/logo.png";
-
-const logoa = {
-  link: "/",
-  alt: "Anoosha Niki",
-  url: "/images/logo.png",
-};
+import styles from "./Header.module.scss";
 
 const Header = () => {
   const router = useRouter();
   const [shouldShowCanvas, setShouldShowCanvas] = useState(false);
   const breakpoint = IS_CLIENT ? useBreakpoint() : "";
-  const isMobile =
+  const isSmallDevice =
     breakpoint === BREAKPOINTS.XSMALL || breakpoint === BREAKPOINTS.SMALL;
 
   const handleCloseCanvas = () => {
@@ -54,15 +47,15 @@ const Header = () => {
         <Link href='/' passHref>
           <Navbar.Brand>
             <Image
-              src={logo}
-              width={isMobile ? 32 : 42}
-              height={isMobile ? 35 : 46}
+              src='/images/logo.png'
+              width={isSmallDevice ? 32 : 42}
+              height={isSmallDevice ? 35 : 46}
               alt='Anoosha Niki'
             />
           </Navbar.Brand>
         </Link>
 
-        {!isMobile && <SocialMedia />}
+        {!isSmallDevice && <SocialMedia />}
 
         <Navbar.Offcanvas
           id='offcanvasNavbar-expand-false'
@@ -91,7 +84,9 @@ const Header = () => {
                 </Link>
               ))}
 
-              {isMobile && <SocialMedia className={styles.canvasSocialMedia} />}
+              {isSmallDevice && (
+                <SocialMedia className={styles.canvasSocialMedia} />
+              )}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
