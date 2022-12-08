@@ -1,0 +1,25 @@
+@import "assets/styles/variables";
+
+.row {
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.col {
+  margin: 2rem 0;
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+
+  img {
+    position: relative !important;
+  }
+}

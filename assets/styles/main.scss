@@ -3,8 +3,8 @@
 
 html,
 body {
-  font-weight: $font-weight-light;
   font-size: $font-size-large;
+  font-weight: $font-weight-light;
   line-height: $line-height;
 }
 
@@ -16,4 +16,10 @@ main {
 h1,
 h2 {
   font-size: $font-size-heading;
+  font-weight: $font-weight-semi-bold;
+}
+
+h3 {
+  font-size: $font-size-heading;
+  font-weight: $font-weight-normal;
 }

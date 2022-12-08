@@ -13,3 +13,7 @@ export { IndexHero } from "./IndexHero";
 export { AboutHero } from "./AboutHero";
 
 export { PortfolioHero } from "./PortfolioHero";
+
+export { PortfolioList } from "./PortfolioList";
+
+export { PortfolioCard } from "./PortfolioCard";
