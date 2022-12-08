@@ -14,6 +14,8 @@ export { AboutHero } from "./AboutHero";
 
 export { PortfolioHero } from "./PortfolioHero";
 
+export { ContactHero } from "./ContactHero";
+
 export { PortfolioList } from "./PortfolioList";
 
 export { PortfolioCard } from "./PortfolioCard";
