@@ -11,6 +11,19 @@
   h2:last-of-type {
     margin-top: 5rem;
   }
+
+  a {
+    text-decoration: none;
+
+    svg {
+      width: $icon-size-medium;
+      height: $icon-size-medium;
+    }
+
+    span {
+      margin-left: 0.25rem;
+    }
+  }
 }
 
 .imageContainer {

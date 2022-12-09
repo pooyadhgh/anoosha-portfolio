@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Container } from "react-bootstrap";
 import { PORTFOLIO } from "../../constants";
-import styles from "./portfolio.module.scss";
 import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
+import { Link45deg } from "react-bootstrap-icons";
+import styles from "./portfolio.module.scss";
 
 const PortfolioItem = () => {
   const { query } = useRouter();
@@ -24,7 +25,8 @@ const PortfolioItem = () => {
     );
   }
 
-  const { title, description, image, screenshot, content, id } = portfolio;
+  const { title, description, image, screenshot, content, url, figma, id } =
+    portfolio;
 
   // Next item card
   const index = PORTFOLIO.findIndex((portfolio) => portfolio.id === id);
@@ -36,12 +38,27 @@ const PortfolioItem = () => {
       <h1>{title}</h1>
       <p>{description}</p>
 
+      {(figma || url) && (
+        <a
+          href={figma || url}
+          rel='nofollow noopener noreferrer'
+          target='_blank'
+        >
+          <Link45deg />
+          <span>View More</span>
+        </a>
+      )}
+
       <Container className={styles.imageContainer}>
         <Image src={screenshot || image} alt={title} fill />
       </Container>
 
-      <h2>What I did</h2>
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      {content && (
+        <>
+          <h2>What I did</h2>
+          <div dangerouslySetInnerHTML={{ __html: content }}></div>
+        </>
+      )}
 
       <h2>{isLastItem ? "Previous" : "Next"}</h2>
       <PortfolioCard {...nextItem} />
