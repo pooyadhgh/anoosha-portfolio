@@ -15,7 +15,7 @@ const PortfolioItem = () => {
   if (!portfolio) {
     return (
       <Container>
-        <h1>Oops! I can't find the portfolio...</h1>
+        <h1>Oops! I can&apos;t find the portfolio...</h1>
 
         <Link href='/portfolio'>
           <span>Go back to the portfolio list</span>
@@ -24,7 +24,7 @@ const PortfolioItem = () => {
     );
   }
 
-  const { title, description, image, content, id } = portfolio;
+  const { title, description, image, screenshot, content, id } = portfolio;
 
   // Next item card
   const index = PORTFOLIO.findIndex((portfolio) => portfolio.id === id);
@@ -37,11 +37,11 @@ const PortfolioItem = () => {
       <p>{description}</p>
 
       <Container className={styles.imageContainer}>
-        <Image src={image} alt={title} fill />
+        <Image src={screenshot || image} alt={title} fill />
       </Container>
 
       <h2>What I did</h2>
-      <div>{content}</div>
+      <div dangerouslySetInnerHTML={{ __html: content }}></div>
 
       <h2>{isLastItem ? "Previous" : "Next"}</h2>
       <PortfolioCard {...nextItem} />

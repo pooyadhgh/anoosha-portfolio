@@ -19,8 +19,11 @@ const ContactHero = () => {
 
         <Col lg>
           <Container className={styles.textContainer}>
-            <h1>Let's chat!</h1>
-            <p>Please fill out the form to get in touch with me.</p>
+            <h1>Let&apos;s chat!</h1>
+            <p>
+              Please send me an email to:{" "}
+              <a href='mailto:anoosha.niki@gmail.com'>anoosha.niki@gmail.com</a>
+            </p>
           </Container>
         </Col>
       </Row>

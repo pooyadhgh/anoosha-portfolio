@@ -13,6 +13,7 @@ import styles from "./Header.module.scss";
 const Header = () => {
   const router = useRouter();
   const [shouldShowCanvas, setShouldShowCanvas] = useState(false);
+  /* eslint-disable react-hooks/rules-of-hooks */
   const breakpoint = IS_CLIENT ? useBreakpoint() : "";
   const isSmallDevice =
     breakpoint === BREAKPOINTS.XSMALL || breakpoint === BREAKPOINTS.SMALL;
@@ -31,6 +32,7 @@ const Header = () => {
     return () => {
       router.events.off("routeChangeStart", handleCloseCanvas);
     };
+    /* eslint-disable react-hooks/exhaustive-deps */
   }, []);
 
   return (
