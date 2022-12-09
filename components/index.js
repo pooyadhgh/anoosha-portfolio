@@ -1,3 +1,5 @@
+export { DocumentHead } from "./DocumentHead";
+
 export { Header } from "./Header";
 
 export { SocialMedia } from "./SocialMedia";
@@ -19,3 +21,5 @@ export { ContactHero } from "./ContactHero";
 export { PortfolioList } from "./PortfolioList";
 
 export { PortfolioCard } from "./PortfolioCard";
+
+export { NotFound } from "./NotFound";
