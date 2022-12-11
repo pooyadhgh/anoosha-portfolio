@@ -1,20 +1,20 @@
 @import "assets/styles/variables";
 
 .row {
-  margin: 1rem 0;
+  margin: $spacing-s 0;
   align-items: center;
 }
 
 .col {
-  margin: 2rem 0;
+  margin: $spacing-m 0;
 
   a {
     text-decoration: none;
     color: $black-color;
-  }
 
-  a:hover {
-    color: $main-color;
+    &:hover {
+      color: $main-color;
+    }
   }
 }
 

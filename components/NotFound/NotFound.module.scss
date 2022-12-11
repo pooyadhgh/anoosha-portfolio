@@ -1,9 +1,9 @@
 @import "assets/styles/variables";
 
 .container {
-  margin: 5rem 0;
+  margin: $spacing-xl 0;
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: $spacing-m;
   }
 }

@@ -5,16 +5,16 @@
 
   svg {
     fill: $black-color;
-    width: $icon-size-normal;
-    height: $icon-size-normal;
+    width: $icon-size-large;
+    height: $icon-size-large;
   }
 }
 
 .closeButton {
   svg {
     fill: $black-color;
-    width: $icon-size-normal;
-    height: $icon-size-normal;
+    width: $icon-size-large;
+    height: $icon-size-large;
     cursor: pointer;
   }
 
@@ -22,25 +22,25 @@
   background-color: unset;
   display: block;
   margin-left: auto;
-}
 
-.closeButton:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.55);
-  border-radius: 0.25rem;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 $spacing-xxs rgba(0, 0, 0, 0.55);
+    border-radius: $spacing-xxs;
+  }
 }
 
 .navbar {
-  margin: 1rem 0;
+  margin: $spacing-s 0;
   @include medium_breakpoint {
-    margin: 3rem;
+    margin: $spacing-l;
   }
 }
 
 .navItem {
   text-decoration: none;
   text-align: center;
-  margin: 0.5rem 0;
+  margin: $spacing-xs 0;
   color: $black-color;
   font-size: $font-size-large;
   font-weight: $font-weight-semi-bold;
@@ -49,5 +49,5 @@
 .canvasSocialMedia {
   display: flex;
   justify-content: center;
-  margin: 3rem 0;
+  margin: $spacing-l 0;
 }

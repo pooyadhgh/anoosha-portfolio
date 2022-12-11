@@ -5,12 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0 1rem;
-  padding: 0 1rem;
+  margin: $spacing-xl 0 $spacing-s;
+  padding: 0 $spacing-s;
 }
 
 .socialMedia {
-  margin-bottom: 2rem;
+  margin-bottom: $spacing-m;
 }
 
 .links {
@@ -19,8 +19,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin: 1rem 0;
+  gap: $spacing-m;
+  margin: $spacing-s 0;
 }
 
 .link {

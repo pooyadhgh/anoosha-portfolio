@@ -2,7 +2,7 @@
 
 .container {
   align-items: center;
-  margin: 3rem 0;
+  margin: $spacing-l 0;
 
   img {
     position: static !important;
@@ -10,19 +10,19 @@
 }
 
 .textContainer {
-  margin-top: 3rem;
+  margin-top: $spacing-l;
 
   @include large_breakpoint {
     margin-top: 0;
   }
 
   button {
-    padding: 1rem 2rem;
-    margin: 1rem;
+    padding: $spacing-s $spacing-m;
+    margin: $spacing-s;
 
     @include large_breakpoint {
-      padding: 1rem 5rem;
-      margin: 1rem 0;
+      padding: $spacing-s $spacing-xl;
+      margin: $spacing-s 0;
     }
   }
 }

@@ -1,15 +1,15 @@
 @import "assets/styles/variables";
 
 .container {
-  margin: 5rem 0;
+  margin: $spacing-xl 0;
 
   h1,
   h2 {
-    margin: 2rem 0;
-  }
+    margin: $spacing-m 0;
 
-  h2:last-of-type {
-    margin-top: 5rem;
+    &:last-of-type {
+      margin-top: $spacing-xl;
+    }
   }
 
   a {
@@ -21,7 +21,7 @@
     }
 
     span {
-      margin-left: 0.25rem;
+      margin-left: 0.2$spacing-xl;
     }
   }
 }
@@ -29,10 +29,10 @@
 .imageContainer {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: $spacing-s;
 
   @include large_breakpoint {
-    padding: 5rem;
+    padding: $spacing-xl;
   }
 
   img {
