@@ -2,7 +2,7 @@ const PORTFOLIO = [
   {
     title: "Soltia Website",
     description:
-      "Soltia.com  is an IT consultant that works with big companies in their customer portfolio. For expanding their company, they need to have a user-friendly website to be well-known along the world.",
+      "Soltia.com is an IT consultancy company in Sweden that works with big companies in their customer portfolio. For expanding their company, they need to have a user-friendly website to be well-known along the world.",
     content: `
     <ul>
     <li>Collaborated closely with stakeholders and different product teams to design the experience and the interface of the product.</li> 
